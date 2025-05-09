@@ -1,0 +1,215 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Code Pro', sans-serif;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url('assets/background_nes.png');
+    background-size: cover;
+  background-position: center;
+  background-attachment: fixed; 
+  height: 100vh;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    animation: moveBackground 40s ease infinite;
+  
+  }
+  
+
+  header {
+    text-align: center;
+    padding: 4rem 2rem 2rem;
+  }
+  a
+  {
+    color: #fff;  /* White text color */
+    text-decoration: none;  /* Remove underline */
+    transition: color 0.3s ease;
+  }
+  
+  a:hover {
+    color: rgb(43, 186, 79);  /* Change color when hovered */
+  }
+  .logo {
+    max-width: 175px;
+    width: 25%;
+    height: auto;
+    animation: pulse 5s ease-in-out infinite;  }
+  
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50%      { transform: scale(1.02); opacity: 0.9; }
+  }
+  @keyframes moveBackground {
+    0% {
+      background-position: 0% 0%;
+    }
+    50% {
+      background-position: 100% 100%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+
+ .pics {
+    max-width: 600px;
+    height: auto;
+    padding-top: 4rem;
+  }
+
+
+  .floating-menu {
+    position: fixed;
+    top: 15%;
+    left: 2rem;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+  
+  .floating-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .floating-menu li {
+    margin-bottom: 1.5rem;
+  }
+  
+  .floating-menu a {
+    color: #fff;
+    text-decoration: none;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+  }
+  
+  .floating-menu a:hover {
+    opacity: 1;
+  }
+  
+  main {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  section {
+    margin-bottom: 6rem;
+    text-align: center;
+    background-color: rgba(12 11 11 / 30%);
+    
+  }
+  
+  .tagline {
+    font-weight: 300;
+    font-size: 1.5rem;
+    opacity: 1;
+    margin-top: 1rem;
+  }
+  
+  .blog-feed {
+    display: flex;
+    flex-direction: column;
+    gap: 4.0rem;
+    margin-top: 2rem;
+  }
+  
+    .posttext {
+      color: #fff;
+    }
+  
+  .post .date {
+    font-size: 0.8rem;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  #records {
+    padding-top: 4rem;
+  }
+  
+  .record-list {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 2rem;
+  }
+  
+  .record h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .record p {
+    margin: 0.3rem 0;
+    color: #ffffff;
+    line-height: 1.5;
+  }
+
+  .record ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 1rem;
+    line-height: 1.6;
+    color: #ffffff;
+    font-size: 0.95rem;
+  }
+  
+  .record ul li::before {
+    content: '– ';
+    color: #ffffff;
+  }
+
+  .record {
+    text-align: center;
+    max-width: 400px; /* Adjust this to your preferred width */
+    margin: 2rem auto;
+    
+  }
+  
+  .cover-art-container {
+    width: 100%;
+    max-width: 400px; /* or 600px if you want it even bigger */
+    aspect-ratio: 1 / 1; /* or 4 / 5 depending on your cover shape */
+    margin: 0 auto 1rem;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;}
+  
+ 
+
+  .cover-art.front {
+    display: block;
+  }
+  
+  .cover-art {
+    width: 100%;
+    height: auto;
+    display: none;
+  }
+  .front {
+    z-index: 2; /* Front image is on top initially */
+  }
+  
+  .back {
+    opacity: 0; /* Initially hide the back image */
+    z-index: 1; /* Behind the front image */
+  }
+  
+  /* Flip effect */
+  .cover-art-container.flipped .front {
+    opacity: 0;
+    display: none;
+    /* Hide the front image */
+  }
+  
+  .cover-art-container.flipped .back {
+    opacity: 1;
+    display: block;
+  }
+  
+  
