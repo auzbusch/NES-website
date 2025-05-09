@@ -12,7 +12,9 @@ body {
     animation: moveBackground 40s ease infinite;
   
   }
-  
+  .about {
+    color: #fff;
+  }
 
   header {
     text-align: center;
@@ -50,7 +52,7 @@ body {
     }
   }
 
- @media (max-width: 768px) {
+  @media (max-width: 768px) {
   body {
     font-size: 16px;
   }
@@ -59,7 +61,6 @@ body {
     height: auto;
   }
 }
-
 
  .pics {
     max-width: 600px;
