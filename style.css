@@ -129,6 +129,8 @@ body {
   
     .posttext {
       color: #fff;
+      padding-left: 3rem;
+    padding-right: 3rem;
     }
   
   .post .date {
