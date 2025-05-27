@@ -68,6 +68,11 @@ body {
     padding-top: 4rem;
   }
 
+    iframe {
+      padding-top: 4rem;
+      height: 100%;
+      border: none;
+    }
 
   .floating-menu {
     position: fixed;
