@@ -200,7 +200,15 @@ body {
     overflow: hidden;
     cursor: pointer;}
   
- 
+ .pics-container {
+    width: 100%;
+    height: 100%;
+    max-width: 600px; /* or 600px if you want it even bigger */
+    aspect-ratio: 1 / 1; /* or 4 / 5 depending on your cover shape */
+    margin: 0 auto 1rem;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;}
 
   .cover-art.front {
     display: block;
@@ -232,4 +240,14 @@ body {
     display: block;
   }
   
+  .pics-container.flipped .front {
+    opacity: 0;
+    display: none;
+    /* Hide the front image */
+  }
+  
+  .pics-container.flipped .back {
+    opacity: 1;
+    display: block;
+  }
   
