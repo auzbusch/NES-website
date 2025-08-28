@@ -132,6 +132,11 @@ body {
     gap: 4.0rem;
     margin-top: 2rem;
   }
+
+  .post
+  {
+    margin-top: 2rem;
+  }
   
     .posttext {
       color: #fff;
@@ -251,3 +256,13 @@ body {
     display: block;
   }
   
+.popuptur
+{position: fixed;     /* stays in place when scrolling */
+      top: 20px;           /* distance from top */
+      right: 2rem;         /* distance from right */
+      width: 220px;
+      background-color: rgba(12 11 11 / 30%);
+      color: #fff;
+      padding: 15px;
+      font-size: 14px;
+      z-index: 1000; }
