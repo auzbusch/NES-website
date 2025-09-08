@@ -263,7 +263,7 @@ body {
   }
   
 .popuptur
-{position: fixed;     /* stays in place when scrolling */
+{position: absolute;     /* stays in place when scrolling */
      transform: translateY(-50%);
     top: 15%;          /* distance from top */
       right: 2rem;         /* distance from right */
