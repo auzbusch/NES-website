@@ -201,7 +201,6 @@ body {
     aspect-ratio: 1 / 1; /* or 4 / 5 depending on your cover shape */
     margin: 0 auto 1rem;
     position: relative;
-    overflow: hidden;
     cursor: pointer;}
   
  .pics-container {
@@ -273,3 +272,15 @@ body {
       padding: 15px;
       font-size: 14px;
       z-index: 1000; }
+
+      
+.rnews
+{
+    position: absolute;
+    color: oldlace;
+    transform: rotate(35deg);
+    top: -15%;
+    left: 87%;
+    font-size: -webkit-xxx-large;
+
+}
