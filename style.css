@@ -276,11 +276,11 @@ body {
       
 .rnews
 {
-    position: absolute;
+      position: absolute;
     color: oldlace;
     transform: rotate(35deg);
-    top: -15%;
-    left: 87%;
+    top: -12%;
+    left: 80%;
     font-size: -webkit-xxx-large;
 
 }
