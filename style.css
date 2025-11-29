@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Source Code Pro', sans-serif;
-    background: linear-gradient(45deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url('assets/dl_bil.png');
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url('assets/rm_rum.jpeg');
     background-size: cover;
   background-position: center;
   background-attachment: fixed; 
