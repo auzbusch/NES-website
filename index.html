@@ -24,8 +24,8 @@
     <ul>
       <li><a href="#" onclick="showSection('home')"><b>Home (Blog)</b></a></li>
       <li><a href="#" onclick="showSection('records')"><b>Records</b></a></li>
+      <li><a href="#" onclick="showSection('gigs')"><b>Gigs</b></a></li>
       <li><a href="#" onclick="showSection('about')"><b>About</b></a></li>
-      <li><a href="https://safedist.ro/"><b>Safe</b></a></li>
     </ul>
   </nav>
 
@@ -280,11 +280,31 @@
 
 
         <!-- Most Recent Record (Newest First) -->
+         <div class="record">
+
+          <div class="cover-art-container" onclick="flipCover(this)">
+            <h2 class="rnews">NEW!</h2>
+
+            <img src="assets/cover_art/nes_09.jpg" alt="???" class="cover-art front" />
+            
+          </div>
+
+          <a href="https://soundcloud.com/noc_e_space/nes09_full-snippets">
+            <h3>NES09 – ??? – ???</h3>
+            <p>Format: Vinyl</p>
+            <p>Released: April, 2026</p>
+            <ul>
+              <li>A1 ???</li>
+              <li>A2 ??? </li>
+              <li>B1 ??? </li>
+              <li>B2 ??? </li>
+            </ul>
+          </a>
+        </div>
 
         <div class="record">
 
           <div class="cover-art-container" onclick="flipCover(this)">
-            <h2 class="rnews">NEW!</h2>
 
             <img src="assets/cover_art/nes_08_f.jpg" alt="T&T – All Of Us Front" class="cover-art front" />
             <img src="assets/cover_art/nes_08_b.jpg" alt="T&T – All Of Us Back" class="cover-art back" />
@@ -428,7 +448,7 @@
             <h3>NES01 – DJ Popup – Heather</h3>
             <p>Format: Vinyl</p>
             <p>Released: March, 2019</p>
-            <ul>
+            <ul class="gigs">
               <li>A1 Heather</li>
               <li>B1 Memory Hole</li>
               <li>B2 Trouble On Rope Street</li>
@@ -438,6 +458,17 @@
 
       </div>
     </section>
+<div class="gigs">
+     <section id="gigs" class="content-section" style="display: none;">
+      <h1 id="yeardate"> 2026 </h1> 
+      <ul>
+        <li><strong>April 10</strong> – Golden Pudel, Hamburg</li>
+        <li><strong>April 24</strong> – Bodega Danza, Copenhagen</li>
+       <!--<li><strong>May 22, 2026</strong> – Olympia, Paris</li> -->
+
+    </ul>
+    </section>
+    </div>
 
 
     <section id="about" class="content-section" style="display: none;">

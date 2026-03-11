@@ -13,10 +13,29 @@ body {
 
 
 
-   
-
   .about {
     color: #fff;
+  }
+#yeardate{
+      color: #fff;
+
+}
+  .gigs {
+    color: #fff;
+    text-align: center;
+    max-width: 400px;
+    margin: 2rem auto;
+    list-style: none;
+  }
+
+  .gigs ul{
+    color: #fff;
+    text-align: center;
+    max-width: 400px;
+    margin: 2rem auto;
+    list-style: none;
+    padding-bottom: 2rem;
+
   }
 
   header {
