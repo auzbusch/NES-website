@@ -52,10 +52,10 @@
 
  <article class="post">
           <div>
-            <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay"
+            <iframe width="600" height="300" scrolling="no" frameborder="no" allow="autoplay"
               src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2265959555&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
             <div
-              style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+              style="font-size: 10px; padding-top: 2rem; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
               <a href="https://soundcloud.com/aurore404records" title="Aurore 404 Records" target="_blank"
                 style="color: #cccccc; text-decoration: none;">Aurore 404 Records</a> · <a
                 href="https://soundcloud.com/aurore404records/a404009-dj-popup-singo"
@@ -268,7 +268,8 @@
       <div class="record">
 
         <p class="about">This is a catalog overview. <br>
-          All records from NES01-06 are currently sold out.<br>
+          All records from NES01-08 are currently sold out.
+          <b><i>NES05 is still available on Safe's Website</i></b><br>
           If you are interested in buying straight from the source, please look to <br><a href="https://safedist.ro/">
             Safe Distribution</a> <br> Otherwise hear your local record dealer, or contact <a
             href="mailto:contactnespace@gmail.com">here.</a> <br>
@@ -282,7 +283,7 @@
         <!-- Most Recent Record (Newest First) -->
          <div class="record">
 
-          <div class="cover-art-container" onclick="flipCover(this)">
+          <div class="cover-art-container">
             <h2 class="rnews">NEW!</h2>
 
             <img src="assets/cover_art/nes_09.jpg" alt="???" class="cover-art front" />
@@ -480,7 +481,16 @@
 
     </section>
 
-
+<div class="audio-player">
+    <audio id="audio" src="assets/nesloop_26.mp3"></audio>
+    <div class="controls">
+      <button id="play-pause">Sounds ?</button>
+      <div id="progress" onclick="seek(event)">
+        <div id="progress-bar"></div>
+      </div>
+      <input type="range" id="volume" min="0" max="1" step="0.1" value="1">
+    </div>
+  </div>
 
 
   </main>
@@ -498,7 +508,41 @@
       element.classList.toggle('flipped');
     }
   </script>
+<script>
+    const audio = document.getElementById("audio");
+    const playPauseBtn = document.getElementById("play-pause");
+    const progress = document.getElementById("progress");
+    const progressBar = document.getElementById("progress-bar");
+    const volume = document.getElementById("volume");
 
+    // Play/Pause
+    playPauseBtn.addEventListener("click", () => {
+      if (audio.paused) {
+        audio.play();
+        playPauseBtn.textContent = "Sounds";
+      } else {
+        audio.pause();
+        playPauseBtn.textContent = "Sounds?";
+      }
+    });
+
+   /*  // Update progress bar
+    audio.addEventListener("timeupdate", () => {
+      const progressPercent = (audio.currentTime / audio.duration) * 100;
+      progressBar.style.width = progressPercent + "%";
+    });
+
+    // Seek
+    function seek(e) {
+      const percent = e.offsetX / progress.offsetWidth;
+      audio.currentTime = percent * audio.duration;
+    }
+ */
+    // Volume
+    volume.addEventListener("input", () => {
+      audio.volume = volume.value;
+    });
+  </script>
 
 </body>
 
