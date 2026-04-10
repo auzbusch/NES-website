@@ -144,7 +144,7 @@ body {
   section {
     margin-bottom: 6rem;
     text-align: center;
-    background-color: rgba(12 11 11 / 15%);
+    background-color: rgba(12 11 11 / 25%);
     
   }
   
@@ -245,6 +245,12 @@ body {
     position: relative;
     overflow: hidden;
     cursor: pointer;}
+    
+    .pics-container-small {
+  display: flex;
+  flex-direction: column; /* Stack images vertically */
+  align-items: flex-start; /* Align to the left */
+  gap: 10px; }
 
  .pics-container img {
     width: 70%;
@@ -352,3 +358,6 @@ body {
     #volume {
       width: 60px;
     }
+
+    #hamburg_lip.jpeg {
+  aspect-ratio: 16/9; }
