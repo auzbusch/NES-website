@@ -145,7 +145,6 @@ section {
 
 .pics-container-small {
    display: flex;
-  flex-direction: column;
   align-items: center;
   gap: 10px;
 }
@@ -366,7 +365,5 @@ button:hover {
     margin-bottom: 0;
   }
 
-  .audio-player {
-    padding: 8px 1rem;
-  }
+  
 }
