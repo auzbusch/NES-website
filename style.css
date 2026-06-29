@@ -2,10 +2,10 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Source Code Pro', sans-serif;
-  background-image: url(assets/dl_bil.png);
-  background-size: cover;
-  background-position: center;
+  background-image: url(assets/Former_1\ A2.jpg);
+  background-size: 120%;
   background-attachment: fixed;
+  animation: float 80s ease-in-out infinite alternate;  background-position: center;
   height: 100vh;
   overflow-x: hidden;
   scroll-behavior: smooth;
@@ -47,6 +47,11 @@ header {
   50%       { transform: scale(1.02); opacity: 1; }
 }
 
+@keyframes float {
+  0%   { background-position: 10% 40%; background-size: 185%; }
+  50%  { background-position: 55% 60%; background-size: 320%; }
+  100% { background-position: 70% 40%; background-size: 145%; }
+}
 /* ── Nav ── */
 
 .floating-menu {
@@ -55,6 +60,7 @@ header {
   left: 2rem;
   transform: translateY(-50%);
   z-index: 10;
+  background-color: rgba(12, 11, 11, 0.15);
 }
 
 .floating-menu ul {
@@ -283,57 +289,7 @@ iframe {
 
 /* ── Audio player ── */
 
-.audio-player {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  padding: 10px 2rem;
-  background: rgba(12, 11, 11, 0.393);
-  backdrop-filter: blur(6px);
-  display: flex;
-  justify-content: center;
-}
 
-.controls {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 12px;
-}
-button {
-  background: #6ab668;
-  color: #fff;
-  border: none;
-  padding: 8px 15px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: opacity 1s ease;
-}
-
-button:hover {
-  background: #416f40;
-}
-
-#progress {
-  flex-grow: 1;
-  height: 5px;
-  background: #ddd;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-#progress-bar {
-  height: 100%;
-  background: #4CAF50;
-  border-radius: 5px;
-  width: 0%;
-}
-
-#volume {
-  width: 60px;
-}
 
 /* ── Responsive ── */
 

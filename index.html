@@ -388,8 +388,31 @@
       <p class="about">Email: <a href="mailto:contactnespace@gmail.com">contactnespace@gmail.com</a></p>
     </section>
 
-  <audio src="assets/nesloop_26.mp3" autoplay loop></audio>
+<button id="musicBtn" onclick="toggleMusic()">▶</button>
 
+<audio id="myAudio" src="assets/nesloop_26.mp3" autoplay loop></audio>
+
+<style>
+  #musicBtn {
+    position: fixed;
+    bottom: 2%;
+    left: 2rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(16, 15, 15, 0.2);
+    backdrop-filter: blur(6px);
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  #musicBtn:hover {
+    background: rgba(255, 255, 255, 0.35);
+  }
+</style>
 
   </main>
 
@@ -405,7 +428,21 @@
       element.classList.toggle('flipped');
     }
 
-   
+     const audio = document.getElementById('myAudio');
+  const btn = document.getElementById('musicBtn');
+
+  // starts as playing (autoplay), so show pause icon
+  btn.textContent = '⏸';
+
+  function toggleMusic() {
+    if (audio.paused) {
+      audio.play();
+      btn.textContent = '⏸';
+    } else {
+      audio.pause();
+      btn.textContent = '▶';
+    }
+  }
   </script>
 
 </body>
